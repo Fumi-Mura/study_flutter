@@ -27,18 +27,24 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const SizedBox(
-              height: 50,
-              width: 60,
-              child: ColoredBox(color: Colors.blue)
-            ),
-            const SizedBox(
-              height: 10,
-              width: 100,
-              child: ColoredBox(color: Colors.yellow)
-            ),
+            // const SizedBox(
+            //   height: 50,
+            //   width: 50,
+            //   child: ColoredBox(color: Colors.blue)
+            // ),
+            // const SizedBox(
+            //   height: 50,
+            //   width: 50,
+            //   child: ColoredBox(color: Colors.blue)
+            // ),
+            // const SizedBox(
+            //   height: 10,
+            //   width: 100,
+            //   child: ColoredBox(color: Colors.yellow)
+            // ),
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -46,10 +52,70 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            const SizedBox(
-              height: 10,
-              width: 100,
-              child: ColoredBox(color: Colors.yellow)
+            const Row(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: 50,
+                    width: 50,
+                    child: ColoredBox(color: Colors.blue),
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: 50,
+                  child: ColoredBox(color: Colors.blue),
+                ),
+              ],
+            ),
+            const Row(
+              // mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: 50,
+                    width: 50,
+                    child: ColoredBox(color: Colors.pink),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: 50,
+                    width: 50,
+                    child: ColoredBox(color: Colors.pink),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: 50,
+                    width: 50,
+                    child: ColoredBox(color: Colors.pink),
+                  ),
+                ),
+              ],
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: 80,
+                    width: 80,
+                    child: ColoredBox(color: Colors.green),
+                  ),
+                ),
+                SizedBox(
+                  height: 80,
+                  width: 80,
+                  child: ColoredBox(color: Colors.green),
+                ),
+              ],
             ),
           ],
         ),
