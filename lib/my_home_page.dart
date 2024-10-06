@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -24,7 +26,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> getRepo() async {
     var url = Uri.https('api.github.com', 'users/Fumi-Mura/repos');
     var response = await http.get(url);
-    print('Response status: ${response.statusCode}');
+    // print('Response status: ${response.statusCode}');
+    // print(response.body);
+
+    final List response2 = json.decode(response.body);
+    print(response2[0]);
   }
 
   List fruite = ["りんご", "みかん", "ブドウ"];
