@@ -114,15 +114,20 @@ class _MyHomePageState extends State<MyHomePage> {
       //       ),
       //     ],
       //   ),
-        child: TextField(
-          onChanged: (value) {
-            print(value);
-            setState(() {
-              message = value;
-            });
-          },
+        child: Column(  // Columnを使って複数ウィジェットを並べる
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            TextField(
+              onChanged: (value) {
+                print(value);
+                setState(() {
+                  message = value;
+                });
+              },
+            ),
+            Text(message),  // テキストをColumn内に配置
+          ],
         ),
-        Text(message),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
